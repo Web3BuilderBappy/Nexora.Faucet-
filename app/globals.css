@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --green: #b5ff2d;
+  --black: #090909;
+  --dark: #111111;
+  --card: #141414;
+  --border: #1e1e1e;
+  --text: #e8e8e8;
+  --muted: #555;
+  --green-dim: rgba(181, 255, 45, 0.08);
+  --green-glow: rgba(181, 255, 45, 0.15);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grid texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(181,255,45,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(181,255,45,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
